@@ -1,14 +1,38 @@
-.navbar{
-  margin-bottom: 0;
-  background-color: $main-color;
+// ============================================================
+//  Project theme custom properties
+// ------------------------------------------------------------
+//  Expose the project tokens as CSS custom properties so custom
+//  styling references them at runtime and stays decoupled from
+//  both hard-coded values and Bootstrap internals.
+// ============================================================
+:root {
+  --theme-primary: #{$theme-primary};
+  --theme-primary-dark: #{$theme-primary-dark};
+  --theme-on-primary: #{set-text-color($theme-primary)};
+}
 
-  .navbar-brand,
-  .nav-link {
-    color: set-text-color($main-color) !important;
-  }
+// --- Navbar -------------------------------------------------
+//  Themed via Bootstrap's public navbar custom properties.
+//  Colour mode is set with `data-bs-theme="dark"` in the markup.
+.navbar{
+  background-color: var(--theme-primary);
+  margin-bottom: 0;
+
   .fa {
     font-size: 18px;
   }
+}
+
+//  Use solid on-primary text for the navbar. Scoped to the same
+//  documented `data-bs-theme="dark"` selector Bootstrap uses, so
+//  the project colour wins on specificity without reaching into
+//  framework internals.
+.navbar[data-bs-theme="dark"]{
+  --bs-navbar-color: var(--theme-on-primary);
+  --bs-navbar-hover-color: var(--theme-on-primary);
+  --bs-navbar-active-color: var(--theme-on-primary);
+  --bs-navbar-brand-color: var(--theme-on-primary);
+  --bs-navbar-brand-hover-color: var(--theme-on-primary);
 }
 
 .showcase{
@@ -31,8 +55,8 @@
 .section-a{
   padding: 30px  0;
   text-align: center;
-  background: $main-color;
-  color: set-text-color($main-color);
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
 
   .fa{
     font-size: $icon-size;
@@ -49,31 +73,33 @@
   }
 }
 
-.card-header{
-  background-color: $main-color;
-
-  h4{
-    color: set-text-color($main-color);
-    margin-bottom: 0;
-  }
+// --- Cards --------------------------------------------------
+//  Theme the card cap (header) through Bootstrap's public
+//  card custom properties instead of overriding descendants.
+.card{
+  --bs-card-cap-bg: var(--theme-primary);
+  --bs-card-cap-color: var(--theme-on-primary);
 }
 
 /** section-c **/
 .section-c{
   padding: 60px 0;
   text-align: center;
-  background: $main-color;
-  color: set-text-color($main-color);
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
 
   .btn-primary{
-    background: darken($main-color, 10%);
+    --bs-btn-bg: var(--theme-primary-dark);
+    --bs-btn-border-color: var(--theme-primary-dark);
+    --bs-btn-hover-bg: var(--theme-primary-dark);
+    --bs-btn-hover-border-color: var(--theme-primary-dark);
   }
 }
 
 .title-bar{
   background: url(../img/showcase.jpg) no-repeat 0 -300px;
   padding-bottom: 10px;
-  border-bottom: 4px solid $main-color;
+  border-bottom: 4px solid var(--theme-primary);
 }
 
 .main{
@@ -82,8 +108,8 @@
 
 footer{
   padding: 30px 0;
-  background: darken($main-color, 10%);
-  color: set-text-color($main-color);
+  background: var(--theme-primary-dark);
+  color: var(--theme-on-primary);
 }
 
 code {

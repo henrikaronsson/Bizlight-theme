@@ -1,5 +1,17 @@
+// 1. Project design tokens (framework-agnostic)
+@import "tokens";
+
+// 2. Project helper functions
 @import "functions";
+
+// 3. Bridge project tokens onto Bootstrap's public Sass API
 @import "customVariables";
+
+// 4. Bootstrap framework
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+// 5. Icons
 @import "../node_modules/font-awesome/scss/font-awesome";
+
+// 6. Project styles (built on Bootstrap's public CSS custom properties)
 @import "custom";

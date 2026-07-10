@@ -1,0 +1,17 @@
+// ============================================================
+//  Project design tokens
+// ------------------------------------------------------------
+//  Framework-agnostic values owned by the Bizlight theme.
+//  These are intentionally independent of Bootstrap so the
+//  project's visual identity lives in one place and is not
+//  coupled to framework internals.
+// ============================================================
+
+// Brand / primary theme colour.
+$theme-primary: #1a8c97 !default;
+
+// Darker shade used for footer and dark surfaces.
+$theme-primary-dark: darken($theme-primary, 10%) !default;
+
+// Size of the large feature icons in the "section A" band.
+$icon-size: 60px !default;

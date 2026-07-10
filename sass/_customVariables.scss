@@ -1,11 +1,10 @@
 // ============================================================
-//  Bizlight custom variables
+//  Bootstrap variable bridge
+// ------------------------------------------------------------
+//  Maps project design tokens onto Bootstrap's *public* Sass
+//  variables. This is the single, documented extension point
+//  where the theme feeds values into the framework.
+//  Do not override Bootstrap internals here.
 // ============================================================
-//  Custom theme variables used across the Sass partials.
-$main-color: #1a8c97;
-$icon-size: 60px;
 
-//  Bootstrap 5 variable overrides.
-//  Defined before Bootstrap is imported so they take precedence
-//  over Bootstrap's own `!default` values.
-$primary: $main-color;
+$primary: $theme-primary;
