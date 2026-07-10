@@ -5,6 +5,9 @@ const pages = ["index", "about", "services", "contact", "readme"];
 
 export default defineConfig({
   root: "src",
+  // Static files served verbatim at the site root; kept at the repo
+  // root (Vite would otherwise resolve "public" inside `root`).
+  publicDir: "../public",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
