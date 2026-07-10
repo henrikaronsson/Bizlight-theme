@@ -1,0 +1,12 @@
+// Project design tokens (Sass token + CSS custom properties).
+@use "tokens";
+
+// Bootstrap, configured through its public Sass API. This is the
+// single point where project tokens feed into the framework.
+@use "bootstrap/scss/bootstrap" with (
+  $primary: tokens.$theme-primary
+);
+
+// Project styles, built on CSS custom properties.
+@use "layout";
+@use "components";
