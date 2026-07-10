@@ -4,8 +4,6 @@ A responsive Bootstrap 5 business theme built with Vite and Sass.
 
 ## Resources
 
-- YouTube tutorial: https://www.youtube.com/watch?v=pB7EwxwSfVk
-- Original theme files: https://github.com/bradtraversy/bizlight_theme
 - Dummy text: https://lipsum.com/
 - Sass language guide: https://sass-lang.com/guide
 - Stock photos: https://www.pexels.com/
