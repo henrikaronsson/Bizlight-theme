@@ -1,46 +1,79 @@
-Youtube tutorial for this project:
---------------------------------------------------
-[https://www.youtube.com/watch?v=pB7EwxwSfVk]
---------------------------------------------------
+# Bizlight Theme
 
-Web resources
---------------------------------------------------
-Theme files: [https://github.com/bradtraversy/bizlight_theme]
-Dummy text: [https://lipsum.com/]
-Sass lang: [http://sass-lang.com/guide]
-PEXELS.com: [https://www.pexels.com/]
---------------------------------------------------
+A responsive Bootstrap 3 business theme built with Sass. This repository uses a
+modern, npm-based development toolchain (Dart Sass + live-server). The UI is still
+Bootstrap 3 — the Bootstrap 5 migration is tracked separately.
 
-Prerequirements:
---------------------------------------------------
-### NODEJS ###  https://nodejs.org/en/ https://nodejs.org/en/
-### KOALA - sass PreProcessor ###  http://koala-app.com/
+## Resources
 
---------------------------------------------------
-SETUP
---------------------------------------------------
-// # Create project_folder
+- YouTube tutorial: https://www.youtube.com/watch?v=pB7EwxwSfVk
+- Original theme files: https://github.com/bradtraversy/bizlight_theme
+- Dummy text: https://lipsum.com/
+- Sass language guide: https://sass-lang.com/guide
+- Stock photos: https://www.pexels.com/
 
-> md proj_name
-> cd proj_name
+## Prerequisites
 
-> md sass //Create sass folder
+- [Node.js](https://nodejs.org/) 18 or newer (an `.nvmrc` is provided).
 
-### Bower ### 
+That's it — Sass, the dev server, and all front-end dependencies are installed
+locally through npm. Bower and KOALA are no longer required.
 
-// # install bower globally
-> npm install -g bower  
+## Setup
 
-// # install fbootstrap-sass
-> bower install bootstrap-sass --save (run in project folder)  //will also install jquery
+Install all dependencies (Bootstrap Sass, Font Awesome, jQuery, Dart Sass and the
+dev server) from `package.json`:
 
-// # install fontawesome
-> bower install fontawesome --save
+```bash
+npm install
+```
 
-###  live-server ### 
---------------------------------------------------
-Install:  npm install  -g live-server
+## Development
 
-## RUN LIVE SERVER ##: 
-> live-server --port=8000
+Start the live-reloading dev server and Sass watcher together:
+
+```bash
+npm run dev
+```
+
+This runs two tasks in parallel:
+
+- `watch:css` — recompiles `sass/app.scss` to `css/app.css` on every change.
+- `serve` — serves the site at http://localhost:8000 with live reload.
+
+### Useful scripts
+
+| Script              | Description                                           |
+| ------------------- | ----------------------------------------------------- |
+| `npm run dev`       | Watch Sass and serve the site with live reload.       |
+| `npm run build`     | One-off production build of `css/app.css` (minified). |
+| `npm run build:css` | Compile Sass to minified CSS.                         |
+| `npm run watch:css` | Recompile Sass on change.                             |
+| `npm run serve`     | Serve the site on port 8000.                          |
+
+## Build
+
+Generate the minified stylesheet for deployment:
+
+```bash
+npm run build
+```
+
+## Project structure
+
+```
+sass/            Sass source (app.scss is the entry point)
+css/             Compiled CSS output (generated)
+js/              Theme JavaScript
+img/ fonts/      Static assets
+*.html           Theme pages
+node_modules/    Front-end dependencies (installed via npm, not committed)
+```
+
+## Notes
+
+- Front-end dependencies are resolved from `node_modules/` and are imported in
+  `sass/app.scss` and referenced from the HTML pages.
+- This toolchain modernization intentionally keeps the existing Bootstrap 3
+  markup and styling unchanged.
 

@@ -89,56 +89,25 @@
                             <h3>Prerequirements</h3>
                             <ul>
                                     <li>
-                                        <a href="https://nodejs.org/en/" target="_blank">### NODEJS ### </a>
+                                        <a href="https://nodejs.org/" target="_blank">### NODE.JS ### </a>
+                                        <i>(version 18 or newer)</i>
                                     </li>
-                                    <li>
-                                        <a href="http://koala-app.com/" target="_blank">### KOALA ### (Sass PreProcessor)</a>
-                                        <i>
-                                            (open Koala Then  --> click plus icon --> select sass folder)
-                                        </i>
-                                    </li>
-    
                                 </ul>
                         </div>
                         
                         <div class="section">
                             <h3>Project setup</h3>
-                                    <h5># Create project_folders</h5>
-                                    
-                                    <figure>
-                                        <img class="box-shadow img-thumbnail img-responsive" src="img/folder_structure.png" alt="">
-                                        <figcaption> &nbsp;&nbsp;Only create higlighted manually</figcaption>
-                                    </figure>
-                                    
-                                    <br/>
-                                    <code> > md proj_name</code>
-                                    <code> > cd proj_name</code>
-                                    
-                                    Example: <code> > md sass //Create sass folder</code>
-                                    <br/>
-                                    <h5><strong> ### Bower ### </strong></h5>
-                                    
-                                    <h5> # install bower globally</h5>
-                                    <code> > npm install -g bower  </code>
-                                    
-                                    <h5> # install bootstrap sass </h5>
-                                    <code> > bower install bootstrap-sass --save </code>
-                                    <i>(run in project folder)  //will also install jquery</i>
-                                    
-                                    <h5> # install fontawesome </h5>
-                                    <code> > bower install fontawesome --save</code>
-                                    <i>
-                                        (Then copy folder "bower_components\font-awesome\fonts" to root)
-                                    </i>
+                                    <h5><strong> ### Install dependencies ### </strong></h5>
+                                    <i>Installs Bootstrap Sass, Font Awesome, jQuery, Dart Sass and the dev server from package.json.</i>
+                                    <code> > npm install</code>
 
-                            
-                                    <h5> <strong>### Live-server ### </strong></h5>
+                                    <h5><strong> ### Development ### </strong></h5>
+                                    <i>Watches Sass and serves the site with live reload at http://localhost:8000</i>
+                                    <code> > npm run dev</code>
 
-                                    <h5> # Install live server globally: # </h5>
-                                    <code>> npm install  -g live-server</code>
-
-                                    <h5># RUN LIVE SERVER # </h5>
-                                    <code> > live-server --port=8000</code>
+                                    <h5><strong> ### Build ### </strong></h5>
+                                    <i>Compiles the minified stylesheet for deployment.</i>
+                                    <code> > npm run build</code>
 
                         </div>
                     </div>
@@ -180,8 +149,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 	
 	  <script src="custom-scripts.js"></script>
 	

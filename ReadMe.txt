@@ -1,46 +1,48 @@
-Youtube tutorial for this project:
---------------------------------------------------
-https://www.youtube.com/watch?v=pB7EwxwSfVk
---------------------------------------------------
+Bizlight Theme
+==================================================
+
+A responsive Bootstrap 3 business theme built with Sass, using a modern
+npm-based development toolchain (Dart Sass + live-server).
 
 Web resources
 --------------------------------------------------
-Theme files: https://github.com/bradtraversy/bizlight_theme
-Dummy text: https://lipsum.com/
-Sass lang: http://sass-lang.com/guide
-PEXELS.com: https://www.pexels.com/
+Youtube tutorial: https://www.youtube.com/watch?v=pB7EwxwSfVk
+Theme files:      https://github.com/bradtraversy/bizlight_theme
+Dummy text:       https://lipsum.com/
+Sass lang:        https://sass-lang.com/guide
+PEXELS.com:       https://www.pexels.com/
 --------------------------------------------------
 
-Prerequirements:
+Prerequisites:
 --------------------------------------------------
-### NODEJS ###  https://nodejs.org/en/ https://nodejs.org/en/
-### KOALA - sass PreProcessor ###  http://koala-app.com/
+Node.js 18 or newer: https://nodejs.org/
+(Sass, the dev server and all front-end dependencies are installed via npm.
+ Bower and KOALA are no longer required.)
 
 --------------------------------------------------
 SETUP
 --------------------------------------------------
-// # Create project_folder
+# Install dependencies (Bootstrap Sass, Font Awesome, jQuery, Dart Sass, dev server)
+> npm install
 
-> md proj_name
-> cd proj_name
-
-> md sass //Create sass folder
-
-### Bower ### 
-
-// # install bower globally
-> npm install -g bower  
-
-// # install fbootstrap-sass
-> bower install bootstrap-sass --save (run in project folder)  //will also install jquery
-
-// # install fontawesome
-> bower install fontawesome --save
-
-###  live-server ### 
 --------------------------------------------------
-Install:  npm install  -g live-server
+DEVELOPMENT
+--------------------------------------------------
+# Watch Sass and serve the site with live reload (http://localhost:8000)
+> npm run dev
 
-## RUN LIVE SERVER ##: 
-> live-server --port=8000
+--------------------------------------------------
+BUILD
+--------------------------------------------------
+# Compile the minified stylesheet for deployment
+> npm run build
+
+--------------------------------------------------
+SCRIPTS
+--------------------------------------------------
+npm run dev        Watch Sass and serve the site with live reload
+npm run build      One-off minified build of css/app.css
+npm run build:css  Compile Sass to minified CSS
+npm run watch:css  Recompile Sass on change
+npm run serve      Serve the site on port 8000
 
