@@ -5,6 +5,47 @@
 //  documented CSS custom properties.
 // ============================================================
 
+// --- Web component hosts ------------------------------------
+//  Custom elements default to display: inline; the page chrome
+//  components are block-level containers.
+site-header,
+site-footer,
+newsletter-signup {
+  display: block;
+}
+
+// --- Fake loading overlay -----------------------------------
+//  Styled by tag name so the overlay covers the page before the
+//  module that defines the element has even run. The element
+//  removes itself after load (see js/components/site-loader.js).
+site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  transition: opacity 0.4s ease;
+}
+
+site-loader .spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+site-loader.is-done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  site-loader {
+    display: none;
+  }
+}
+
 // --- Navbar -------------------------------------------------
 //  Colour mode is set with `data-bs-theme="dark"` in the markup;
 //  scoping to the same documented attribute lets the project

@@ -28,8 +28,10 @@ npm run preview # serve the production build locally
 
 ```
 src/
-  index.html        Home page (plus about/services/contact/readme pages)
+  index.html        Home page (plus about/services/contact pages)
   js/main.js        Single ES-module entry: styles + Bootstrap behaviour
+  js/components/    Web components for shared page chrome
+                    (site-loader, site-header, newsletter-signup, site-footer)
   styles/
     main.scss       Style entry point (@use modules only)
     _tokens.scss    Project design tokens (Sass token + CSS custom properties)

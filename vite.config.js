@@ -1,7 +1,7 @@
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
 
-const pages = ["index", "about", "services", "contact", "readme"];
+const pages = ["index", "about", "services", "contact"];
 
 export default defineConfig({
   root: "src",
