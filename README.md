@@ -36,6 +36,7 @@ src/
     _layout.scss    Page bands: showcase, sections, title bar, footer
     _components.scss  Bootstrap component theming via documented CSS variables
   assets/img/       Images (processed and hashed by Vite)
+public/             Static files copied verbatim to the site root (favicon, robots.txt)
 vite.config.js      Multi-page Vite configuration
 dist/               Production output (generated, not committed)
 ```
