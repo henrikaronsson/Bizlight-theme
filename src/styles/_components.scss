@@ -1,0 +1,28 @@
+// ============================================================
+//  Component theming
+// ------------------------------------------------------------
+//  Bootstrap components are themed exclusively through their
+//  documented CSS custom properties.
+// ============================================================
+
+// --- Navbar -------------------------------------------------
+//  Colour mode is set with `data-bs-theme="dark"` in the markup;
+//  scoping to the same documented attribute lets the project
+//  colours win without reaching into framework internals.
+.navbar {
+  background-color: var(--theme-primary);
+}
+
+.navbar[data-bs-theme="dark"] {
+  --bs-navbar-color: var(--theme-on-primary);
+  --bs-navbar-hover-color: var(--theme-on-primary);
+  --bs-navbar-active-color: var(--theme-on-primary);
+  --bs-navbar-brand-color: var(--theme-on-primary);
+  --bs-navbar-brand-hover-color: var(--theme-on-primary);
+}
+
+// --- Cards --------------------------------------------------
+.card {
+  --bs-card-cap-bg: var(--theme-primary);
+  --bs-card-cap-color: var(--theme-on-primary);
+}

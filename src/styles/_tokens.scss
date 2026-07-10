@@ -1,0 +1,24 @@
+// ============================================================
+//  Project design tokens
+// ------------------------------------------------------------
+//  The Sass variable exists only because Bootstrap must be
+//  configured at compile time. Everything else consumes the
+//  CSS custom properties below at runtime, so project styles
+//  stay decoupled from Sass and from Bootstrap internals.
+// ============================================================
+
+// Brand / primary theme colour.
+$theme-primary: #1a8c97;
+
+:root {
+  --theme-primary: #{$theme-primary};
+
+  // Darker shade for the footer and dark surfaces.
+  --theme-primary-dark: color-mix(in srgb, var(--theme-primary) 80%, black);
+
+  // Text colour on primary surfaces (the brand colour is dark).
+  --theme-on-primary: #fff;
+
+  // Size of the large feature icons in the "section A" band.
+  --theme-icon-size: 3.75rem;
+}

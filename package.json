@@ -1,30 +1,23 @@
 {
   "name": "bizlight-theme",
   "version": "1.0.0",
-  "description": "Bizlight Bootstrap 3 theme with a modern npm-based development toolchain.",
+  "description": "Bizlight Bootstrap 5 business theme built with Vite and Sass.",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build:css": "sass sass/app.scss css/app.css --style=compressed --quiet",
-    "watch:css": "sass --watch sass/app.scss:css/app.css --quiet",
-    "serve": "live-server --port=8000",
-    "dev": "run-p watch:css serve",
-    "build": "npm run build:css"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ],
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "font-awesome": "^4.7.0"
+    "bootstrap": "^5.3.7",
+    "bootstrap-icons": "^1.13.1"
   },
   "devDependencies": {
-    "live-server": "^1.2.2",
-    "npm-run-all": "^4.1.5",
-    "sass": "^1.77.0"
+    "sass-embedded": "^1.89.2",
+    "vite": "^7.0.0"
   }
 }
