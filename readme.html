@@ -15,30 +15,25 @@
 
     
     <!-- Fixed: <nav class="navbar navbar-inverse navbar-fixed-top">  -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-expand-md navbar-dark">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Bizlight Theme</a>
-        </div>
+        <a class="navbar-brand" href="#">Bizlight Theme</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="active"><a href="readme.html">ReadMe</a></li>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="readme.html">ReadMe</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="http://linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="http://twitter.com"><i class="fa fa-twitter"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="http://facebook.com"><i class="fa fa-facebook"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="http://google-plus.com"><i class="fa fa-google-plus"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="http://linkedin.com"><i class="fa fa-linkedin"></i></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -57,11 +52,11 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">  
-              <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">ReadMe.txt</h4>
+              <div class="card mb-3">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">ReadMe.txt</h4>
                     </div>
-                    <div class="panel-body">
+                    <div class="card-body">
                         <div class="section">
                             <h3>Links</h3>
                             <ul>
@@ -98,7 +93,7 @@
                         <div class="section">
                             <h3>Project setup</h3>
                                     <h5><strong> ### Install dependencies ### </strong></h5>
-                                    <i>Installs Bootstrap Sass, Font Awesome, jQuery, Dart Sass and the dev server from package.json.</i>
+                                    <i>Installs Bootstrap 5, Font Awesome, Dart Sass and the dev server from package.json.</i>
                                     <code> > npm install</code>
 
                                     <h5><strong> ### Development ### </strong></h5>
@@ -122,15 +117,15 @@
     <div class="section-c">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-8 offset-md-2">
             <h2>Subscribe To Our Newsletter</h2>
             <br />
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sem rhoncus urna iaculis faucibus.</p>
             <hr />
             <form>
-              <input type="text" class="form-control input-lg" placeholder="Enter Email">
+              <input type="text" class="form-control form-control-lg" placeholder="Enter Email">
               <br />
-              <button class="btn btn-primary btn-lg btn-block">Submit</button>
+              <button class="btn btn-primary btn-lg w-100">Submit</button>
             </form>
           </div>
         </div>
@@ -149,8 +144,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	
 	  <script src="custom-scripts.js"></script>
 	

@@ -1,7 +1,7 @@
 Bizlight Theme
 ==================================================
 
-A responsive Bootstrap 3 business theme built with Sass, using a modern
+A responsive Bootstrap 5 business theme built with Sass, using a modern
 npm-based development toolchain (Dart Sass + live-server).
 
 Web resources
@@ -22,7 +22,7 @@ Node.js 18 or newer: https://nodejs.org/
 --------------------------------------------------
 SETUP
 --------------------------------------------------
-# Install dependencies (Bootstrap Sass, Font Awesome, jQuery, Dart Sass, dev server)
+# Install dependencies (Bootstrap 5, Font Awesome, Dart Sass, dev server)
 > npm install
 
 --------------------------------------------------

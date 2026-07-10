@@ -1,8 +1,7 @@
 # Bizlight Theme
 
-A responsive Bootstrap 3 business theme built with Sass. This repository uses a
-modern, npm-based development toolchain (Dart Sass + live-server). The UI is still
-Bootstrap 3 — the Bootstrap 5 migration is tracked separately.
+A responsive Bootstrap 5 business theme built with Sass. This repository uses a
+modern, npm-based development toolchain (Dart Sass + live-server).
 
 ## Resources
 
@@ -21,7 +20,7 @@ locally through npm. Bower and KOALA are no longer required.
 
 ## Setup
 
-Install all dependencies (Bootstrap Sass, Font Awesome, jQuery, Dart Sass and the
+Install all dependencies (Bootstrap 5, Font Awesome, Dart Sass and the
 dev server) from `package.json`:
 
 ```bash
@@ -74,6 +73,6 @@ node_modules/    Front-end dependencies (installed via npm, not committed)
 
 - Front-end dependencies are resolved from `node_modules/` and are imported in
   `sass/app.scss` and referenced from the HTML pages.
-- This toolchain modernization intentionally keeps the existing Bootstrap 3
-  markup and styling unchanged.
+- The UI is built with Bootstrap 5; Bootstrap's JavaScript bundle (with Popper)
+  is loaded on each page and no longer depends on jQuery.
 

@@ -19,9 +19,8 @@
     "not dead"
   ],
   "dependencies": {
-    "bootstrap-sass": "^3.4.3",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.7.1"
+    "bootstrap": "^5.3.3",
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "live-server": "^1.2.2",

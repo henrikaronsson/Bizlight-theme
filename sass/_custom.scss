@@ -1,6 +1,9 @@
 .navbar{
   margin-bottom: 0;
-  a {
+  background-color: $main-color;
+
+  .navbar-brand,
+  .nav-link {
     color: set-text-color($main-color) !important;
   }
   .fa {
@@ -46,8 +49,13 @@
   }
 }
 
-.panel-heading h4{
-  color: set-text-color($main-color);
+.card-header{
+  background-color: $main-color;
+
+  h4{
+    color: set-text-color($main-color);
+    margin-bottom: 0;
+  }
 }
 
 /** section-c **/
